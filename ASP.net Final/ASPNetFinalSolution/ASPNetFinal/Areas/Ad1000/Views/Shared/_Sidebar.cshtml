@@ -1,0 +1,33 @@
+﻿
+<aside id="left-panel" class="left-panel">
+    <nav class="navbar navbar-expand-sm navbar-default">
+        <div id="main-menu" class="main-menu collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="@Url.Action("Index","Dashboard")"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                </li>
+                <li class="menu-title">Main Menu</li><!-- /.menu-title -->
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Category</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="@Url.Action("Index","Category",routeValues:new { area="Ad1000"})">Categories</a></li>
+                        <li><a href="@Url.Action("Create","Category")">Add Category</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Skills</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="@Url.Action("Index","Skill",routeValues:new { area="Ad1000"})">Skills</a></li>
+                        <li><a href="@Url.Action("Create","Skill")">Add Skill</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Edit CV</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="@Url.Action("Index","Person",routeValues:new { area="Ad1000"})">Skills</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</aside>

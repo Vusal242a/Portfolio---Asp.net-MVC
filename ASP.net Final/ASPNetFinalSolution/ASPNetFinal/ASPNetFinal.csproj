@@ -149,7 +149,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Ad1000\Ad1000AreaRegistration.cs" />
+    <Compile Include="Areas\Ad1000\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Ad1000\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Ad1000\Controllers\SkillController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -356,6 +358,18 @@
     <Content Include="Areas\Ad1000\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Ad1000\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Ad1000\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Shared\_Sidebar.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Skill\Create.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Skill\Delete.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Skill\Details.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Skill\Edit.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Skill\Index.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\EditCV.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />
