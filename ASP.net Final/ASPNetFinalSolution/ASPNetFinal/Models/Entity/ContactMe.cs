@@ -20,5 +20,7 @@ namespace ASPNetFinal.Models.Entity
         [Required]
         [StringLength(500)]
         public string Content { get; set; }
+        public string Answer { get; set; }
+        public bool IsRead { get; set; }
     }
 }

@@ -148,13 +148,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Ad1000\Ad1000AreaRegistration.cs" />
+    <Compile Include="Areas\Ad1000\Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905241434026_VusalCV1.cs" />
-    <Compile Include="Migrations\201905241434026_VusalCV1.Designer.cs">
-      <DependentUpon>201905241434026_VusalCV1.cs</DependentUpon>
+    <Compile Include="Migrations\201905241600167_VusalCV.cs" />
+    <Compile Include="Migrations\201905241600167_VusalCV.Designer.cs">
+      <DependentUpon>201905241600167_VusalCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -171,6 +173,90 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Template\assets\css\cs-skin-elastic.css" />
+    <Content Include="Areas\Template\assets\css\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="Areas\Template\assets\css\lib\chosen\chosen-sprite.png" />
+    <Content Include="Areas\Template\assets\css\lib\chosen\chosen.css" />
+    <Content Include="Areas\Template\assets\css\lib\chosen\chosen.min.css" />
+    <Content Include="Areas\Template\assets\css\lib\datatable\buttons.bootstrap.min.css" />
+    <Content Include="Areas\Template\assets\css\lib\datatable\buttons.dataTables.min.css" />
+    <Content Include="Areas\Template\assets\css\lib\datatable\dataTables.bootstrap.min.css" />
+    <Content Include="Areas\Template\assets\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="Areas\Template\assets\css\style.css" />
+    <Content Include="Areas\Template\assets\fonts\icomoon\icomoon.svg" />
+    <Content Include="Areas\Template\assets\fonts\icomoon\index.html" />
+    <Content Include="Areas\Template\assets\js\dashboard.js" />
+    <Content Include="Areas\Template\assets\js\init\chartjs-init.js" />
+    <Content Include="Areas\Template\assets\js\init\datatables-init.js" />
+    <Content Include="Areas\Template\assets\js\init\flot-chart-init.js" />
+    <Content Include="Areas\Template\assets\js\init\fullcalendar-init.js" />
+    <Content Include="Areas\Template\assets\js\init\gmap-init.js" />
+    <Content Include="Areas\Template\assets\js\init\peitychart-init.js" />
+    <Content Include="Areas\Template\assets\js\init\vector-init.js" />
+    <Content Include="Areas\Template\assets\js\init\weather-init.js" />
+    <Content Include="Areas\Template\assets\js\lib\chosen\chosen.jquery.js" />
+    <Content Include="Areas\Template\assets\js\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\chosen\chosen.proto.js" />
+    <Content Include="Areas\Template\assets\js\lib\chosen\chosen.proto.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\buttons.bootstrap.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\dataTables.bootstrap.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\datatables.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\jszip.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="Areas\Template\assets\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="Areas\Template\assets\js\lib\gmap\gmapApi.js" />
+    <Content Include="Areas\Template\assets\js\lib\gmap\gmaps.js" />
+    <Content Include="Areas\Template\assets\js\lib\gmap\gmaps.min.js" />
+    <Content Include="Areas\Template\assets\js\main.js" />
+    <Content Include="Areas\Template\assets\js\vmap.sampledata.js" />
+    <Content Include="Areas\Template\assets\js\widgets.js" />
+    <Content Include="Areas\Template\assets\scss\style.css" />
+    <Content Include="Areas\Template\charts-chartjs.html" />
+    <Content Include="Areas\Template\charts-flot.html" />
+    <Content Include="Areas\Template\charts-peity.html" />
+    <Content Include="Areas\Template\font-fontawesome.html" />
+    <Content Include="Areas\Template\font-themify.html" />
+    <Content Include="Areas\Template\forms-advanced.html" />
+    <Content Include="Areas\Template\forms-basic.html" />
+    <Content Include="Areas\Template\images\admin.jpg" />
+    <Content Include="Areas\Template\images\avatar\1.jpg" />
+    <Content Include="Areas\Template\images\avatar\2.jpg" />
+    <Content Include="Areas\Template\images\avatar\3.jpg" />
+    <Content Include="Areas\Template\images\avatar\4.jpg" />
+    <Content Include="Areas\Template\images\avatar\5.jpg" />
+    <Content Include="Areas\Template\images\avatar\6.jpg" />
+    <Content Include="Areas\Template\images\avatar\64-1.jpg" />
+    <Content Include="Areas\Template\images\avatar\64-2.jpg" />
+    <Content Include="Areas\Template\images\favicon.png" />
+    <Content Include="Areas\Template\images\logo.png" />
+    <Content Include="Areas\Template\images\logo2.png" />
+    <Content Include="Areas\Template\index.html" />
+    <Content Include="Areas\Template\maps-gmap.html" />
+    <Content Include="Areas\Template\maps-vector.html" />
+    <Content Include="Areas\Template\page-login.html" />
+    <Content Include="Areas\Template\page-register.html" />
+    <Content Include="Areas\Template\pages-forget.html" />
+    <Content Include="Areas\Template\tables-basic.html" />
+    <Content Include="Areas\Template\tables-data.html" />
+    <Content Include="Areas\Template\ui-alerts.html" />
+    <Content Include="Areas\Template\ui-badges.html" />
+    <Content Include="Areas\Template\ui-buttons.html" />
+    <Content Include="Areas\Template\ui-cards.html" />
+    <Content Include="Areas\Template\ui-grids.html" />
+    <Content Include="Areas\Template\ui-modals.html" />
+    <Content Include="Areas\Template\ui-progressbar.html" />
+    <Content Include="Areas\Template\ui-switches.html" />
+    <Content Include="Areas\Template\ui-tabs.html" />
+    <Content Include="Areas\Template\ui-typgraphy.html" />
+    <Content Include="Areas\Template\widgets.html" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -253,8 +339,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Ad1000\Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Ad1000\Views\web.config" />
+    <Content Include="Areas\Template\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Areas\Template\assets\css\style.css.map" />
+    <Content Include="Areas\Template\assets\fonts\icomoon\icomoon.eot" />
+    <Content Include="Areas\Template\assets\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Areas\Template\assets\fonts\icomoon\icomoon.woff" />
+    <Content Include="Areas\Template\assets\scss\style.css.map" />
+    <Content Include="Areas\Template\assets\scss\style.scss" />
+    <Content Include="Areas\Template\images\.gitignore" />
+    <Content Include="Areas\Template\images\logo.psd" />
+    <Content Include="Areas\Template\README.md" />
+    <Content Include="Areas\Ad1000\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />
@@ -275,8 +376,8 @@
     <Content Include="Views\Home\Sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905241434026_VusalCV1.resx">
-      <DependentUpon>201905241434026_VusalCV1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905241600167_VusalCV.resx">
+      <DependentUpon>201905241600167_VusalCV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
