@@ -152,8 +152,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905241434026_VusalCV1.cs" />
+    <Compile Include="Migrations\201905241434026_VusalCV1.Designer.cs">
+      <DependentUpon>201905241434026_VusalCV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
+    <Compile Include="Models\Entity\AcademicBackground.cs" />
+    <Compile Include="Models\Entity\Admin.cs" />
+    <Compile Include="Models\Entity\BaseEntity.cs" />
+    <Compile Include="Models\Entity\BioSkills.cs" />
+    <Compile Include="Models\Entity\Category.cs" />
+    <Compile Include="Models\Entity\ContactMe.cs" />
     <Compile Include="Models\Entity\Person.cs" />
+    <Compile Include="Models\Entity\ProfessionalExperience.cs" />
+    <Compile Include="Models\Entity\Skills.cs" />
+    <Compile Include="Models\Entity\SocialProfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +273,11 @@
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Sidebar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905241434026_VusalCV1.resx">
+      <DependentUpon>201905241434026_VusalCV1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
