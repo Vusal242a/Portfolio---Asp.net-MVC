@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ASPNetFinal.Models.Entity.Category>
+@{
+    Layout = null;
+}
+<div class="col-sm-6">
+    <select class="selectpicker">
+        @foreach (var item in Model)
+        {
+            <option>@item.Name</option>
+        }
+    </select>
+    <span class="add-custm">or <a href="#."> Add A Custom Category</a></span>
+</div>

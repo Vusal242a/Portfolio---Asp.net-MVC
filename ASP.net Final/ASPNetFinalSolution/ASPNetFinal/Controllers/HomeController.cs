@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASPNetFinal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace ASPNetFinal.Controllers
 {
     public class HomeController : Controller
     {
+        CvDbContext db = new CvDbContext();
+        
         public ActionResult Index()
         {
             ViewBag.Message = "Your about me page.";
-            return View();
+            return View(db.Person.FirstOrDefault());
         }
 
         public ActionResult Resume()
@@ -33,12 +36,27 @@ namespace ASPNetFinal.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-            return View();
+            return View(db.Person.FirstOrDefault());
         }
         public ActionResult Sidebar()
         {
             ViewBag.Message = "Your sidebar.";
-            return View();
+            return View(db.Person.FirstOrDefault());
+        }
+        public ActionResult SocialProfile()
+        {
+            var SoProfi = db.SocialProfiles.FirstOrDefault();
+            return View(SoProfi);
+        }
+        public ActionResult ReProfExp()
+        {
+            var ProExp = db.ProfessionalExperience.ToList();
+            return View(ProExp);
+        }
+        public ActionResult AcademBack()
+        {
+            var Academic = db.AAcademicBackgroundca.ToList();
+            return View(Academic);
         }
     }
 }

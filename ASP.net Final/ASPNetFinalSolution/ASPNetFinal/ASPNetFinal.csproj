@@ -156,9 +156,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905241600167_VusalCV.cs" />
-    <Compile Include="Migrations\201905241600167_VusalCV.Designer.cs">
-      <DependentUpon>201905241600167_VusalCV.cs</DependentUpon>
+    <Compile Include="Migrations\201905250933559_VusalCV1.cs" />
+    <Compile Include="Migrations\201905250933559_VusalCV1.Designer.cs">
+      <DependentUpon>201905250933559_VusalCV1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -370,6 +370,13 @@
     <Content Include="Areas\Ad1000\Views\Skill\Edit.cshtml" />
     <Content Include="Areas\Ad1000\Views\Skill\Index.cshtml" />
     <Content Include="Areas\Ad1000\Views\Dashboard\EditCV.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\AddDetails.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\AddSocialProfiles.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\AddBioSkill.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\AddProExp.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\AddAcademicBackg.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\Skills.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\Catego.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />
@@ -388,10 +395,13 @@
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Sidebar.cshtml" />
+    <Content Include="Views\Home\SocialProfile.cshtml" />
+    <Content Include="Views\Home\ReProfExp.cshtml" />
+    <Content Include="Views\Home\AcademBack.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905241600167_VusalCV.resx">
-      <DependentUpon>201905241600167_VusalCV.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905250933559_VusalCV1.resx">
+      <DependentUpon>201905250933559_VusalCV1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,39 @@
+﻿@model ASPNetFinal.Models.Entity.SocialProfiles
+@{ Layout = null;}
+
+<h5 class="tittle">Social Profiles</h5>
+<div class="social-icon bor-btm padding-25">
+    <form method="post" action="@Url.Action("AddSocialProfile","Dashboard")">
+        <ul>
+            <li>
+                <i class="fa fa-facebook"></i>
+                <input class="form-control" type="text" value="@Model.Facebook" name="Facebook">
+            </li>
+            <li>
+                <i class="fa fa-twitter"></i>
+                <input class="form-control" type="text" value="@Model.Twitter" name="Twitter">
+            </li>
+            <li>
+                <i class="fa fa-google-plus"></i>
+                <input class="form-control" type="text" value="@Model.Google" name="Google">
+            </li>
+            <li>
+                <i class="fa fa-linkedin"></i>
+                <input class="form-control" type="text" value="@Model.LinkedIn" name="LinkedIn">
+            </li>
+            <li>
+                <i class="fa fa-dribbble"></i>
+                <input class="form-control" type="text" value="@Model.Dribble" name="Dribble">
+            </li>
+            <li>
+                <i class="fa fa-behance"></i>
+                <input class="form-control" type="text" value="@Model.Behance" name="Behance">
+            </li>
+            <li>
+                <i class="fa fa-stumbleupon"></i>
+                <input class="form-control" type="text" value="@Model.Stumbleupon" name="Stumbleupon">
+            </li>
+            <li> <button href="#" class="btn" type="submit"> Save Changes</button> </li>
+        </ul>
+    </form>
+</div>

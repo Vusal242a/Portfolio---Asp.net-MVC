@@ -1,0 +1,57 @@
+﻿@model ASPNetFinal.Models.Entity.Person
+@{ Layout = null;}
+<h5 class="tittle">Professional Details</h5>
+<label class="btn-file">
+    <i class="fa fa-camera"></i> Click to Add Photo
+    <input type="file" style="display: none;" value="@Model.Image" name="Image">
+</label>
+
+<form method="post" action="@Url.Action("AddDetail","Dashboard")">
+    <ul class="personal-info">
+        <li>
+            <p>
+                <span>
+                    Name
+                    <input class="form-control" type="text" value="@Model.Name" name="Name">
+                </span>
+                <span>
+                    Age
+                    <input class="form-control" type="text" value="@Model.Age" name="Age">
+                </span>
+                <span>
+                    Location
+                    <input class="form-control" type="text" value="@Model.Location" name="Location">
+                </span>
+                <span>
+                    Experience
+                    <input class="form-control" type="text" value="@Model.Experience" name="Experience">
+                </span>
+                <span>
+                    Degree
+                    <input class="form-control" type="text" value="@Model.Degree" name="Degree">
+                </span>
+                <span>
+                    Career Level
+                    <input class="form-control" type="text" value="@Model.CareerLevel" name="CareerLevel">
+                </span>
+                <span>
+                    Email
+                    <input class="form-control" type="text" value="@Model.Email" name="Email">
+                </span>
+                <span>
+                    Phone
+                    <input class="form-control" type="text" value="@Model.Phone" name="Phone">
+                </span>
+                <span>
+                    Web Site
+                    <input class="form-control" type="text" value="@Model.Website" name="Website">
+                </span>
+                <span>
+                    Fax
+                    <input class="form-control" type="text" value="@Model.Fax" name="Fax">
+                </span>
+            </p>
+        </li>
+        <li> <button href="#" class="btn" type="submit"><i class="fa fa-plus"></i> ADD INFO</button> </li>
+    </ul>
+</form>

@@ -1,4 +1,4 @@
-﻿
+﻿@model ASPNetFinal.Models.Entity.Person
 @{
     ViewBag.Title = "Index";
 }
@@ -13,34 +13,34 @@
         <!-- Personal Info -->
         <ul class="personal-info">
             <li>
-                <p> <span> Name</span> John Doe </p>
+                <p> <span> Name</span> @Model.Name</p>
             </li>
             <li>
-                <p> <span> Age</span> 38 Years </p>
+                <p> <span> Age</span> @Model.Age </p>
             </li>
             <li>
-                <p> <span> Location</span> Rome, Italy </p>
+                <p> <span> Location</span> @Model.Location </p>
             </li>
             <li>
-                <p> <span> Experience</span> 15 Years </p>
+                <p> <span> Experience</span> @Model.Experience </p>
             </li>
             <li>
-                <p> <span> Degree</span> MBA </p>
+                <p> <span> Degree</span> @Model.Degree </p>
             </li>
             <li>
-                <p> <span> Career Level</span> Mid-Level </p>
+                <p> <span> Career Level</span>@Model.CareerLevel </p>
             </li>
             <li>
-                <p> <span> Phone</span> (800) 123-4567 </p>
+                <p> <span> Phone</span> @Model.Phone </p>
             </li>
             <li>
-                <p> <span> FAX</span> (800) 123-4568 </p>
+                <p> <span> FAX</span> @Model.Fax </p>
             </li>
             <li>
-                <p> <span> E-mail</span> <a href="#."> example@example.com</a> </p>
+                <p> <span> E-mail</span> <a href="#."> @Model.Email</a> </p>
             </li>
             <li>
-                <p> <span> Website</span><a href="#."> example.com </a></p>
+                <p> <span> Website</span><a href="@Model.Website">@Model.Website </a></p>
             </li>
         </ul>
 

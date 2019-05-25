@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ASPNetFinal.Models.Entity.ProfessionalExperience>
+
+@{ Layout = null;}
+
+<div class="inside-sec margin-top-30">
+    <!-- Professional Experience -->
+    <h5 class="tittle">Professional Experience</h5>
+    <div class="padding-30 exp-history">
+
+        <!-- ADD Professional -->
+        <form method="post" action="@Url.Action("AddProEx","Dashboard")">
+            <div class="exp">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <label>
+                            Duration
+                            <input type="text" class="form-control" name="Duration">
+                        </label>
+                        <label>
+                            Job Title
+                            <input type="text" class="form-control" name="JobTitle">
+                        </label>
+                        <label>
+                            Company Name
+                            <input type="text" class="form-control"  name="CompanyName">
+                        </label>
+                        <label>
+                            Location
+                            <input type="text" class="form-control"  name="Location">
+                        </label>
+                    </div>
+
+                    <!-- UPLOAD IMG -->
+                    <div class="col-sm-5">
+                        <label class="btn-file">
+                            <i class="fa fa-camera"></i> Click to attach logo
+                            <input type="file" style="display: none;">
+                        </label>
+                    </div>
+
+                    <!-- ADD DETAILS -->
+                    <div class="col-sm-12">
+                        <label>
+                            Details
+                            <textarea class="form-control" name="Details"></textarea>
+                        </label>
+                        <!-- ADD MORE-->
+                        <button href="#" type="submit" class="btn margin-top-20"><i class="fa fa-plus"></i> Add Experience</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -3,7 +3,7 @@ namespace ASPNetFinal.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class VusalCV : DbMigration
+    public partial class VusalCV1 : DbMigration
     {
         public override void Up()
         {
