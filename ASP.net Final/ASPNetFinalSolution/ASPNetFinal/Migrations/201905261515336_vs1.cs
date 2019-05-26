@@ -3,7 +3,7 @@ namespace ASPNetFinal.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class VusalCV1 : DbMigration
+    public partial class vs1 : DbMigration
     {
         public override void Up()
         {
@@ -42,22 +42,21 @@ namespace ASPNetFinal.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Description = c.String(maxLength: 500),
-                        SkillLeve = c.String(maxLength: 100),
+                        SkillLeve = c.Int(nullable: false),
                         SkillDescription = c.String(maxLength: 500),
                         AsBar = c.Boolean(nullable: false),
                         AsTag = c.Boolean(nullable: false),
                         CategoryId = c.Int(nullable: false),
-                        SkillId = c.Int(nullable: false),
+                        SkillsId = c.Int(nullable: false),
                         CreatedDate = c.DateTime(),
                         DeletedDate = c.DateTime(),
                         UpdateDate = c.DateTime(),
-                        Skills_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Categories", t => t.CategoryId, cascadeDelete: true)
-                .ForeignKey("dbo.Skills", t => t.Skills_Id)
+                .ForeignKey("dbo.Skills", t => t.SkillsId, cascadeDelete: true)
                 .Index(t => t.CategoryId)
-                .Index(t => t.Skills_Id);
+                .Index(t => t.SkillsId);
             
             CreateTable(
                 "dbo.Categories",
@@ -160,9 +159,9 @@ namespace ASPNetFinal.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.BioSkills", "Skills_Id", "dbo.Skills");
+            DropForeignKey("dbo.BioSkills", "SkillsId", "dbo.Skills");
             DropForeignKey("dbo.BioSkills", "CategoryId", "dbo.Categories");
-            DropIndex("dbo.BioSkills", new[] { "Skills_Id" });
+            DropIndex("dbo.BioSkills", new[] { "SkillsId" });
             DropIndex("dbo.BioSkills", new[] { "CategoryId" });
             DropTable("dbo.SocialProfiles");
             DropTable("dbo.ProfessionalExperiences");

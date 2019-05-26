@@ -95,8 +95,6 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\roslyn\System.IO.Compression.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\roslyn\VBCSCompiler.exe
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.dll
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\ApplicationInsights.config
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\ASPNetFinal.dll.config
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\ASPNetFinal.dll
@@ -144,6 +142,7 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\roslyn\vbc.rsp
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Antlr3.Runtime.dll
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.SqlServer.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.DependencyCollector.dll
@@ -163,6 +162,7 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\System.Web.WebPages.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\System.Web.WebPages.Razor.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\WebGrease.dll
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\EntityFramework.SqlServer.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\System.Web.Helpers.xml
@@ -179,10 +179,10 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.Web.xml
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV1.resources
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csprojResolveAssemblyReference.cache
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.CoreCompileInputs.cache
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.CopyComplete
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.pdb
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csprojResolveAssemblyReference.cache
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.vs1.resources
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache

@@ -60,7 +60,7 @@ namespace ASPNetFinal.Controllers
         }
         public ActionResult BioSkill()
         {
-            var bios = db.BioSkills.ToList();
+            var bios = db.BioSkills.OrderByDescending(b=> b.AsBar==true).ToList();
             return View(bios);
         }
     }

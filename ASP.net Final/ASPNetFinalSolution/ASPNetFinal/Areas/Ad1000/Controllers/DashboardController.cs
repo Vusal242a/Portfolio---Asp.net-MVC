@@ -136,6 +136,5 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             
             return RedirectToAction("EditCV");
         }
-
     }
 }

@@ -5,37 +5,41 @@
     @foreach (var item in Model)
     {
         <h6>@item.Category.Name</h6>
-        <div class="panel-group accordion" id="accordion5">
-            <div class="panel panel-default">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <!-- PANEL HEADING -->
-                        <div class="panel-heading">
-                            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5">@item.Skills.Name</a> </h4>
-                        </div>
-                    </div>
-
-                    <!-- Skillls Bars -->
-                    <div class="col-sm-8">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="@item.SkillLeve" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">@item.SkillLeve% Complete</span> </div>
+        if (item.AsBar == true)
+        {
+            <div class="panel-group accordion" id="accordion5">
+                <div class="panel panel-default">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <!-- PANEL HEADING -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#@item.Id"> @item.Skills.Name</a></h4>
+                            </div>
                         </div>
 
-                        <!-- Skillls Text -->
-                        <div id="collapseOne5" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <p>@item.SkillDescription</p>
+                        <!-- Skillls Bars -->
+                        <div class="col-sm-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@item.SkillLeve" aria-valuemin="0" aria-valuemax="100" style="width: @item.SkillLeve%;"> <span class="sr-only">@item.SkillLeve% Complete</span> </div>
+                            </div>
+
+                            <!-- Skillls Text -->
+                            <div id="@item.Id" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>@item.SkillDescription</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        }
+        <hr>
+        <div class="ethical">
+            @if (item.AsTag == true)
+            {
+                <a href="#.">@item.Category.Name</a>
+            }
         </div>
     }
-
-    <!-- Follow ethical -->
-    <div class="ethical">
-        <h6>Follow ethical work practices</h6>
-        <a href="#.">Prioritize Learning Tasks</a> <a href="#.">Make Ethical Choices</a> <a href="#.">Social Work</a> <a href="#.">Community Work</a>
-    </div>
 </div>
