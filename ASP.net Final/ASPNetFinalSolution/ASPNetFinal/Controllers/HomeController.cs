@@ -58,5 +58,10 @@ namespace ASPNetFinal.Controllers
             var Academic = db.AAcademicBackgroundca.ToList();
             return View(Academic);
         }
+        public ActionResult BioSkill()
+        {
+            var bios = db.BioSkills.ToList();
+            return View(bios);
+        }
     }
 }

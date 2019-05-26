@@ -1,14 +1,23 @@
 ﻿@model IEnumerable<ASPNetFinal.Models.Entity.Skills>
+
 @{
     Layout = null;
 }
 
 <div class="col-sm-6">
-    <select class="selectpicker">
+    <input type="hidden" id="Skillid" name="SkillId" />
+    <select id="Skills" class="selectpicker">
         @foreach (var item in Model)
         {
-            <option>@item.Name</option>
+            <option value="@item.Id">@item.Name</option>
         }
     </select>
     <span class="add-custm">or <a href="#."> Add A Custom Skills</a></span>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+<script>
+    $("#Skills").change(function () {
+        var selected = $(this).children("option:selected").val();
+        $("#Skillid").val(selected)
+    })
+</script>

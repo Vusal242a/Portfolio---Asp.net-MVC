@@ -28,7 +28,8 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
         public ActionResult AddBioSkill()
         {
-            return View();
+            var Bios = db.BioSkills.ToList();
+            return View(Bios);
         }
         public ActionResult AddSocialProfiles()
         {
@@ -130,20 +131,9 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         [HttpPost]
         public ActionResult BioSkills(BioSkills BioSi)
         {
-            if (db.BioSkills.Any())
-            {
-                var Bio = db.BioSkills.FirstOrDefault();
-                Bio.Description = BioSi.Description;
-                Bio.SkillDescription = BioSi.SkillDescription;
-                Bio.SkillLeve = BioSi.SkillLeve;
-                db.SaveChanges();
-                return RedirectToAction("EditCV");
-            }
-            if (ModelState.IsValid)
-            {
                 db.BioSkills.Add(BioSi);
                 db.SaveChanges();
-            }
+            
             return RedirectToAction("EditCV");
         }
 

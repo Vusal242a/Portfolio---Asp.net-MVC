@@ -398,6 +398,7 @@
     <Content Include="Views\Home\SocialProfile.cshtml" />
     <Content Include="Views\Home\ReProfExp.cshtml" />
     <Content Include="Views\Home\AcademBack.cshtml" />
+    <Content Include="Views\Home\BioSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905250933559_VusalCV1.resx">
