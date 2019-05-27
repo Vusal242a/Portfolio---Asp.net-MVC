@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ad1000 Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="~/Areas/Login/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h1 class="login-heading">
+                <strong>Welcome.</strong> Please login.
+            </h1>
+            <p style="color:red">@ViewBag.LoginError</p>
+            <form method="post" action="@Url.Action("Login","Dashboard")">
+                <input type="text" name="Email" placeholder="Username" required="required" class="input-txt" />
+                <input type="password" name="Password" placeholder="Password" required="required" class="input-txt" />
+                <div class="login-footer">
+                    @*<a href="#" class="lnk">
+                        <span class="icon icon--min"></span>
+                        I've forgotten something
+                    </a>*@
+                    <button type="submit" class="btn btn--right">Sign in  </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/Areas/Login/js/index.js"></script>
+</body>
+</html>

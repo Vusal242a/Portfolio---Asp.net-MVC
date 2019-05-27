@@ -175,6 +175,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Login\css\style.css" />
+    <Content Include="Areas\Login\index.html" />
+    <Content Include="Areas\Login\js\index.js" />
     <Content Include="Areas\Template\assets\css\cs-skin-elastic.css" />
     <Content Include="Areas\Template\assets\css\lib\chosen\chosen-sprite%402x.png" />
     <Content Include="Areas\Template\assets\css\lib\chosen\chosen-sprite.png" />
@@ -342,6 +345,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Ad1000\Models\" />
+    <Folder Include="Areas\Ad1000\Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Ad1000\Views\web.config" />
@@ -377,6 +381,8 @@
     <Content Include="Areas\Ad1000\Views\Dashboard\AddAcademicBackg.cshtml" />
     <Content Include="Areas\Ad1000\Views\Dashboard\Skills.cshtml" />
     <Content Include="Areas\Ad1000\Views\Dashboard\Catego.cshtml" />
+    <Content Include="Areas\Login\scss\style.scss" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\Login.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />

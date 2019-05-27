@@ -136,5 +136,23 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             
             return RedirectToAction("EditCV");
         }
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(Admin Admin)
+        {
+            var Alogin = db.Admin.FirstOrDefault();
+            if (Alogin.Email==Admin.Email && Alogin.Password== Admin.Password)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.LoginError ="Email or Password not matched";
+                return View();
+            }
+        }
     }
 }
