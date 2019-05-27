@@ -11,6 +11,7 @@ using ASPNetFinal.Models.Entity;
 
 namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
+    [CvAuthorization]
     public class SkillController : Controller
     {
         private CvDbContext db = new CvDbContext();

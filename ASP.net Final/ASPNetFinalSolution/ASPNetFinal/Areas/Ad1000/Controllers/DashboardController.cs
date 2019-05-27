@@ -1,4 +1,5 @@
-﻿using ASPNetFinal.Models;
+﻿using ASPNetFinal.AppCode.Constant;
+using ASPNetFinal.Models;
 using ASPNetFinal.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using System.Web.Mvc;
 
 namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
+
+   [CvAuthorizationAttribute]
     public class DashboardController : Controller
     {
         CvDbContext db = new CvDbContext();
@@ -136,16 +139,24 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             
             return RedirectToAction("EditCV");
         }
+
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
+
+
+        [AllowAnonymous]
+
         [HttpPost]
         public ActionResult Login(Admin Admin)
         {
             var Alogin = db.Admin.FirstOrDefault();
             if (Alogin.Email==Admin.Email && Alogin.Password== Admin.Password)
             {
+
+                Session[SessionKey.Admin] = Admin;
                 return RedirectToAction("Index");
             }
             else

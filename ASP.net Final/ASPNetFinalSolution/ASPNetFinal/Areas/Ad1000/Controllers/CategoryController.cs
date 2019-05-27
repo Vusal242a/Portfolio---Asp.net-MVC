@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -9,8 +10,10 @@ using System.Web.Mvc;
 using ASPNetFinal.Models;
 using ASPNetFinal.Models.Entity;
 
+
 namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
+    [CvAuthorization]
     public class CategoryController : Controller
     {
         private CvDbContext db = new CvDbContext();
