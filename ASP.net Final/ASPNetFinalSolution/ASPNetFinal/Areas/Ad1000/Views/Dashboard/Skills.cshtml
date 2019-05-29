@@ -7,10 +7,11 @@
 <div class="col-sm-6">
     <input type="hidden" id="Skillid" name="SkillsId" />
     <select id="Skills" class="selectpicker">
+        <option disabled selected value>-- Select Skill --</option>
         @foreach (var item in Model)
-        {
-            <option value="@item.Id">@item.Name</option>
-        }
+    {
+        <option value="@item.Id">@item.Name</option>
+}
     </select>
     <span class="add-custm">or <a href="#."> Add a Custom Skills</a></span>
 </div>

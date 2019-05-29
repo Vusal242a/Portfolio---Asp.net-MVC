@@ -1,4 +1,5 @@
 ﻿using ASPNetFinal.Models;
+using ASPNetFinal.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +63,23 @@ namespace ASPNetFinal.Controllers
         {
             var bios = db.BioSkills.OrderByDescending(b=> b.AsBar==true).ToList();
             return View(bios);
+        }
+        [HttpPost]
+        public ActionResult Contact(ContactMe emailModel)
+        {
+            if (emailModel.Name == null || emailModel.Email == null || emailModel.Content == null)
+            {
+                TempData["fill"] = "Name,Email,and Body must be written";
+                return RedirectToAction("Contact");
+            }
+            if (ModelState.IsValid)
+            {
+                db.ContactMe.Add(emailModel);
+                db.SaveChanges();
+                Extension.SendMail(emailModel.Subject, emailModel.Content,emailModel.Email);
+                return RedirectToAction("Contact");
+            }
+            return RedirectToAction("Contact");
         }
     }
 }

@@ -146,6 +146,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\Constant\SessionKey.cs" />
+    <Compile Include="AppCode\Extensions\ImageExtension.cs" />
+    <Compile Include="AppCode\Extensions\MailExtension.cs" />
     <Compile Include="AppCode\Filters\CvAuthorizationAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -161,6 +163,10 @@
     <Compile Include="Migrations\201905291026271_VusalCV.cs" />
     <Compile Include="Migrations\201905291026271_VusalCV.Designer.cs">
       <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905291420092_VusalCV v 1.0.cs" />
+    <Compile Include="Migrations\201905291420092_VusalCV v 1.0.Designer.cs">
+      <DependentUpon>201905291420092_VusalCV v 1.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -347,6 +353,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Ad1000\Models\" />
+    <Folder Include="Template\Media\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Ad1000\Views\web.config" />
@@ -410,6 +417,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905291026271_VusalCV.resx">
       <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905291420092_VusalCV v 1.0.resx">
+      <DependentUpon>201905291420092_VusalCV v 1.0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

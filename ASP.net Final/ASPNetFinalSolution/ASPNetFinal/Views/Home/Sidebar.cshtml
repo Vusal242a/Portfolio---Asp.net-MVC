@@ -6,7 +6,7 @@
 
     <!-- Professional Details -->
     <h5 class="tittle">Professional Details</h5>
-    <img src="~/Template/images/avatar.jpg" class="img-responsive" alt="">
+    <img src="@(string.IsNullOrWhiteSpace(Model.Image)?"":Href("~/Template/Media/"+Model.Image))" class="img-responsive" alt="Profile Picture" style="width:100%;height:100%;">
     <ul class="personal-info">
         <li>
             <p> <span> Name</span> @Model.Name </p>

@@ -61,7 +61,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddDetail(Person Person)
+        public ActionResult AddDetail(Person Person,HttpPostedFileBase Image)
         {
             if (db.Person.Any())
             {
@@ -78,6 +78,8 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 P.Phone = Person.Phone;
                 P.Website = Person.Website;
                 //db.Entry(P).State = System.Data.Entity.EntityState.Modified;
+                string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
+                P.Image = i;
                 db.SaveChanges();
                 return RedirectToAction("EditCV");
             }
@@ -112,10 +114,12 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             return RedirectToAction("EditCV");
         }
         [HttpPost]
-        public ActionResult AddProEx(ProfessionalExperience ProfExp)
+        public ActionResult AddProEx(ProfessionalExperience ProfExp, HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
+                string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
+                ProfExp.Image = i;
                 db.ProfessionalExperience.Add(ProfExp);
                 db.SaveChanges();
             }

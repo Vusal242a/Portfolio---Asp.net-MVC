@@ -8,6 +8,7 @@ namespace ASPNetFinal.Models.Entity
 {
     public class BioSkills:BaseEntity
     {
+        public string Image { get; set; }
         [StringLength(500)]
         public string Description { get; set; }
         public int SkillLeve { get; set; }

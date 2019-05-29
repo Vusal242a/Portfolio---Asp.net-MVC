@@ -186,3 +186,4 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.CopyComplete
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.pdb
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCVv10.resources

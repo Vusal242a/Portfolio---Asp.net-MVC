@@ -8,6 +8,7 @@ namespace ASPNetFinal.Models.Entity
 {
     public class AcademicBackground:BaseEntity
     {
+        public string Image { get; set; }
         [StringLength(10)]
         public string Qualification { get; set; }
         [StringLength(150)]

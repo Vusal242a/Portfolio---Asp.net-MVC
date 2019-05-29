@@ -1,12 +1,13 @@
 ﻿@model IEnumerable<ASPNetFinal.Models.Entity.BioSkills>
 @{ Layout = null; }
+<p>Vusal Mahmudlu BIO Description</p>
+<hr />
 <div class="skills">
-    <h5 class="margin-top-30">Hard Skills</h5>
     @foreach (var item in Model)
     {
-
         if (item.AsBar == true)
         {
+
             <h6>@item.Category.Name</h6>
             <div class="panel-group accordion" id="accordion5">
                 <div class="panel panel-default">
@@ -17,13 +18,11 @@
                                 <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#@item.Id"> @item.Skills.Name</a></h4>
                             </div>
                         </div>
-
                         <!-- Skillls Bars -->
                         <div class="col-sm-8">
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="@item.SkillLeve" aria-valuemin="0" aria-valuemax="100" style="width: @item.SkillLeve%;"> <span class="sr-only">@item.SkillLeve% Complete</span> </div>
                             </div>
-
                             <!-- Skillls Text -->
                             <div id="@item.Id" class="panel-collapse collapse in">
                                 <div class="panel-body">
@@ -39,9 +38,9 @@
     }
     @foreach (var item in Model)
     {
-             if (item.AsTag == true)
-            {
-                <a href="#." class="btn p-3" style="background:#346abb; color:white; margin-bottom: 3px;" >@item.Category.Name</a>
-            }
+        if (item.AsTag == true)
+        {
+            <a href="#." class="btn p-3" style="background:#346abb; color:white; margin-bottom: 3px;">@item.Category.Name</a>
+        }
     }
 </div>

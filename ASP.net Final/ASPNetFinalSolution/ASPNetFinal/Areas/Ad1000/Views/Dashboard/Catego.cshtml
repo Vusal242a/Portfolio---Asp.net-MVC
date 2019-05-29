@@ -5,16 +5,18 @@
 <div class="col-sm-6">
     <input type="hidden" id="Catid" name="CategoryId" />
     <select id="Category" class="selectpicker">
+        <option disabled selected value>-- Select Category --</option>
         @foreach (var item in Model)
-        {
-            <option value="@item.Id">@item.Name</option>
-        }
+    {
+
+        <option value="@item.Id">@item.Name</option>
+}
     </select>
     <span class="add-custm">or <a href="#."> Add a Custom Category</a></span>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
-    $("#Category").change(function () {
+    $("#Category").on('change',function () {
         var selected = $(this).children("option:selected").val();
         $("#Catid").val(selected)
     })

@@ -8,6 +8,7 @@ namespace ASPNetFinal.Models.Entity
 {
     public class ProfessionalExperience:BaseEntity
     {
+        public string Image { get; set; }
         [StringLength(10)]
         public string Duration { get; set; }
         [StringLength(150)]
