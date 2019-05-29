@@ -5,14 +5,14 @@
 }
 
 <div class="col-sm-6">
-    <input type="hidden" id="Skillid" name="SkillId" />
+    <input type="hidden" id="Skillid" name="SkillsId" />
     <select id="Skills" class="selectpicker">
         @foreach (var item in Model)
         {
             <option value="@item.Id">@item.Name</option>
         }
     </select>
-    <span class="add-custm">or <a href="#."> Add A Custom Skills</a></span>
+    <span class="add-custm">or <a href="#."> Add a Custom Skills</a></span>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script>

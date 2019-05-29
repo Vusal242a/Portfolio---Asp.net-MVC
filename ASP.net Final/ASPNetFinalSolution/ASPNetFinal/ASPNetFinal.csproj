@@ -158,9 +158,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905261515336_vs1.cs" />
-    <Compile Include="Migrations\201905261515336_vs1.Designer.cs">
-      <DependentUpon>201905261515336_vs1.cs</DependentUpon>
+    <Compile Include="Migrations\201905291026271_VusalCV.cs" />
+    <Compile Include="Migrations\201905291026271_VusalCV.Designer.cs">
+      <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -347,7 +347,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Ad1000\Models\" />
-    <Folder Include="Areas\Ad1000\Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Ad1000\Views\web.config" />
@@ -409,8 +408,8 @@
     <Content Include="Views\Home\BioSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905261515336_vs1.resx">
-      <DependentUpon>201905261515336_vs1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905291026271_VusalCV.resx">
+      <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

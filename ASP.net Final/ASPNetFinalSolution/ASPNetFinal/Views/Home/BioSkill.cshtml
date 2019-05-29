@@ -4,9 +4,10 @@
     <h5 class="margin-top-30">Hard Skills</h5>
     @foreach (var item in Model)
     {
-        <h6>@item.Category.Name</h6>
+
         if (item.AsBar == true)
         {
+            <h6>@item.Category.Name</h6>
             <div class="panel-group accordion" id="accordion5">
                 <div class="panel panel-default">
                     <div class="row">
@@ -33,13 +34,14 @@
                     </div>
                 </div>
             </div>
+            <hr />
         }
-        <hr>
-        <div class="ethical">
-            @if (item.AsTag == true)
+    }
+    @foreach (var item in Model)
+    {
+             if (item.AsTag == true)
             {
-                <a href="#.">@item.Category.Name</a>
+                <a href="#." class="btn p-3" style="background:#346abb; color:white; margin-bottom: 3px;" >@item.Category.Name</a>
             }
-        </div>
     }
 </div>
