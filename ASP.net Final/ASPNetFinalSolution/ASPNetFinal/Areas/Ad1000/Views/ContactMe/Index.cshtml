@@ -1,0 +1,138 @@
+﻿@model IEnumerable<ASPNetFinal.Models.Entity.ContactMe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Ad1000/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRead)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @if (item.IsRead == false)
+            {
+                <th>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Subject)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Answer)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IsRead)
+                </th>
+                <th>
+                    <button type="button" onclick="SendEmail(@item.Id)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        Answer Email
+                    </button>
+
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </th>
+            }
+            @if (item.IsRead == true)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Answer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsRead)
+                </td>
+                <td>
+                    <button type="button" onclick="SendEmail(@item.Id)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        Answer Email
+                    </button>
+
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            }
+        </tr>
+    }
+
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Answer Email</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="replyanswer">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script>
+    function SendEmail(id)
+    {
+        $.ajax({
+            url: '@Url.Action("Details", "ContactMe")/' + id,
+            type: 'GET',
+            success: function (response) {
+                console.log(response)
+                $("#replyanswer").html(response)
+                $('#exampleModal').modal()
+            },
+            error: function (response) { console.error(response) }
+
+        })
+    }
+
+    var selectedMsg;
+    (selectedMsg).onclick(function () {
+        selectedMsg.isRead == true;
+    });
+</script>

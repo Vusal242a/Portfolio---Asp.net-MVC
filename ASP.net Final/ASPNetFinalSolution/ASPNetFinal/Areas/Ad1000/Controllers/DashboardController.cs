@@ -10,7 +10,7 @@ using System.Web.Mvc;
 namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
 
-   [CvAuthorizationAttribute]
+    [CvAuthorizationAttribute]
     public class DashboardController : Controller
     {
         CvDbContext db = new CvDbContext();
@@ -61,7 +61,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddDetail(Person Person,HttpPostedFileBase Image)
+        public ActionResult AddDetail(Person Person, HttpPostedFileBase Image)
         {
             if (db.Person.Any())
             {
@@ -80,11 +80,13 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 //db.Entry(P).State = System.Data.Entity.EntityState.Modified;
                 string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
                 P.Image = i;
+                P.UpdateDate = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("EditCV");
             }
             if (ModelState.IsValid)
             {
+                Person.CreatedDate = DateTime.Now;
                 db.Person.Add(Person);
                 db.SaveChanges();
             }
@@ -103,11 +105,13 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 S.Twitter = SocProfil.Twitter;
                 S.Dribble = SocProfil.Dribble;
                 S.Behance = SocProfil.Behance;
+                S.UpdateDate = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("EditCV");
             }
             if (ModelState.IsValid)
             {
+                SocProfil.CreatedDate = DateTime.Now;
                 db.SocialProfiles.Add(SocProfil);
                 db.SaveChanges();
             }
@@ -120,6 +124,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             {
                 string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
                 ProfExp.Image = i;
+                ProfExp.CreatedDate = DateTime.Now;
                 db.ProfessionalExperience.Add(ProfExp);
                 db.SaveChanges();
             }
@@ -130,6 +135,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         {
             if (ModelState.IsValid)
             {
+                AcBack.CreatedDate = DateTime.Now;
                 db.AAcademicBackgroundca.Add(AcBack);
                 db.SaveChanges();
             }
@@ -138,26 +144,23 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         [HttpPost]
         public ActionResult BioSkills(BioSkills BioSi)
         {
-                db.BioSkills.Add(BioSi);
-                db.SaveChanges();
-            
+            BioSi.CreatedDate = DateTime.Now;
+            db.BioSkills.Add(BioSi);
+            db.SaveChanges();
+
             return RedirectToAction("EditCV");
         }
-
         [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
-
-
         [AllowAnonymous]
-
         [HttpPost]
         public ActionResult Login(Admin Admin)
         {
             var Alogin = db.Admin.FirstOrDefault();
-            if (Alogin.Email==Admin.Email && Alogin.Password== Admin.Password)
+            if (Alogin.Email == Admin.Email && Alogin.Password == Admin.Password)
             {
 
                 Session[SessionKey.Admin] = Admin;
@@ -165,19 +168,10 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             }
             else
             {
-                ViewBag.LoginError ="Email or Password not matched";
+                ViewBag.LoginError = "Email or Password not matched";
                 return View();
             }
         }
-        public ActionResult ContactReply()
-        {
-            
-            return View();
-        }
-        public ActionResult Emails()
-        {
-            var Contact = db.ContactMe.ToList();
-            return View(Contact);
-        }
+      
     }
 }

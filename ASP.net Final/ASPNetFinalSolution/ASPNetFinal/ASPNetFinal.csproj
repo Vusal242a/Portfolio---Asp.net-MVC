@@ -154,6 +154,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Ad1000\Ad1000AreaRegistration.cs" />
     <Compile Include="Areas\Ad1000\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Ad1000\Controllers\ContactMeController.cs" />
     <Compile Include="Areas\Ad1000\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Ad1000\Controllers\SkillController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -387,8 +388,10 @@
     <Content Include="Areas\Ad1000\Views\Dashboard\Catego.cshtml" />
     <Content Include="Areas\Login\scss\style.scss" />
     <Content Include="Areas\Ad1000\Views\Dashboard\Login.cshtml" />
-    <Content Include="Areas\Ad1000\Views\Dashboard\ContactReply.cshtml" />
-    <Content Include="Areas\Ad1000\Views\Dashboard\Emails.cshtml" />
+    <Content Include="Areas\Ad1000\Views\ContactMe\Delete.cshtml" />
+    <Content Include="Areas\Ad1000\Views\ContactMe\Details.cshtml" />
+    <Content Include="Areas\Ad1000\Views\ContactMe\Index.cshtml" />
+    <Content Include="Areas\Ad1000\Views\ContactMe\ContactReply.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />

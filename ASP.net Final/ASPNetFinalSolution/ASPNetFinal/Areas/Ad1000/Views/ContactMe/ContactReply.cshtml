@@ -1,0 +1,36 @@
+﻿@model ASPNetFinal.Models.Entity.ContactMe
+@{ Layout = null;}
+
+<form role="form" id="contact_form_1" class="contact-form" method="post" action="@Url.Action("Answer","ContactMe")">
+    <input type="hidden" value="@Model.Id" name="id"/>
+    <ul class="row">
+        <li class="col-sm-4">
+            <label>
+                <input type="text" class="form-control" name="Name" id="name_1" value="@Model.Name">
+            </label>
+        </li>
+        <li class="col-sm-4">
+            <label>
+                <input type="text" class="form-control" name="Email" id="email_1" value="@Model.Email">
+            </label>
+        </li>
+        <li class="col-sm-4">
+            <label>
+                <input type="text" class="form-control" name="Subject" id="company_1" value="@Model.Subject">
+            </label>
+        </li>
+        <li class="col-sm-12">
+            <label>
+                <input class="form-control" name="Content" id="message_1" rows="5" value="@Model.Content">
+            </label>
+        </li>
+        <li class="col-sm-12">
+            <label>
+                <input class="form-control" name="Answer" id="message_1" rows="5" >
+            </label>
+        </li>
+        <li class="col-sm-12">
+            <button type="submit" value="submit" id="btn_submit_1">SEND EMAIL</button>
+        </li>
+    </ul>
+</form>
