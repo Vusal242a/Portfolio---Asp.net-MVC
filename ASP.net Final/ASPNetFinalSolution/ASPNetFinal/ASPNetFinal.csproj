@@ -160,13 +160,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905291026271_VusalCV.cs" />
-    <Compile Include="Migrations\201905291026271_VusalCV.Designer.cs">
-      <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905291420092_VusalCV v 1.0.cs" />
-    <Compile Include="Migrations\201905291420092_VusalCV v 1.0.Designer.cs">
-      <DependentUpon>201905291420092_VusalCV v 1.0.cs</DependentUpon>
+    <Compile Include="Migrations\201905300832485_VusalCV.cs" />
+    <Compile Include="Migrations\201905300832485_VusalCV.Designer.cs">
+      <DependentUpon>201905300832485_VusalCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -391,6 +387,8 @@
     <Content Include="Areas\Ad1000\Views\Dashboard\Catego.cshtml" />
     <Content Include="Areas\Login\scss\style.scss" />
     <Content Include="Areas\Ad1000\Views\Dashboard\Login.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\ContactReply.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\Emails.cshtml" />
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />
@@ -415,11 +413,8 @@
     <Content Include="Views\Home\BioSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905291026271_VusalCV.resx">
-      <DependentUpon>201905291026271_VusalCV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905291420092_VusalCV v 1.0.resx">
-      <DependentUpon>201905291420092_VusalCV v 1.0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905300832485_VusalCV.resx">
+      <DependentUpon>201905300832485_VusalCV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

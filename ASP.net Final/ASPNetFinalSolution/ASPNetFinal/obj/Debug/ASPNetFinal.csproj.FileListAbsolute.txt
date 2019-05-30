@@ -180,10 +180,9 @@ C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\Microsoft.AI.Web.xml
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csprojResolveAssemblyReference.cache
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.CoreCompileInputs.cache
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.CopyComplete
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.pdb
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCVv10.resources
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache

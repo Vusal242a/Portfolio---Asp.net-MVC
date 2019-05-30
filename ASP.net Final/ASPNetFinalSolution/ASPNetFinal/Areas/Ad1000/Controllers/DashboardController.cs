@@ -169,5 +169,15 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 return View();
             }
         }
+        public ActionResult ContactReply()
+        {
+            
+            return View();
+        }
+        public ActionResult Emails()
+        {
+            var Contact = db.ContactMe.ToList();
+            return View(Contact);
+        }
     }
 }
