@@ -18,7 +18,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         // GET: Ad1000/ContactMe
         public ActionResult Index()
         {
-            return View(db.ContactMe.ToList());
+            return View(db.ContactMe.OrderByDescending(o => o.IsRead == false).ToList());
         }
 
         // GET: Ad1000/ContactMe/Details/5
@@ -29,6 +29,8 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ContactMe contactMe = db.ContactMe.Find(id);
+            contactMe.IsRead = true;
+            db.SaveChanges();
             if (contactMe == null)
             {
                 return HttpNotFound();

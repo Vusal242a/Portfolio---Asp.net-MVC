@@ -131,10 +131,12 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             return RedirectToAction("EditCV");
         }
         [HttpPost]
-        public ActionResult AddAcademicBack(AcademicBackground AcBack)
+        public ActionResult AddAcademicBack(AcademicBackground AcBack, HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
+                string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
+                AcBack.Image = i;
                 AcBack.CreatedDate = DateTime.Now;
                 db.AAcademicBackgroundca.Add(AcBack);
                 db.SaveChanges();

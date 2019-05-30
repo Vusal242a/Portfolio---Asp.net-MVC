@@ -59,7 +59,33 @@
                     <div id="contact_message_1" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
 
                     <!-- FORM -->
-                   
+                    <form role="form" id="contact_form_1" class="contact-form" method="post" action="@Url.Action("Contact","Home")">
+                        <ul class="row">
+                            <li class="col-sm-4">
+                                <label>
+                                    <input type="text" class="form-control" name="Name" id="name_1" placeholder="Name">
+                                </label>
+                            </li>
+                            <li class="col-sm-4">
+                                <label>
+                                    <input type="text" class="form-control" name="Email" id="email_1" placeholder="Email">
+                                </label>
+                            </li>
+                            <li class="col-sm-4">
+                                <label>
+                                    <input type="text" class="form-control" name="Subject" id="company_1" placeholder="Subject">
+                                </label>
+                            </li>
+                            <li class="col-sm-12">
+                                <label>
+                                    <textarea class="form-control" name="Content" id="message_1" rows="5" placeholder="Content"></textarea>
+                                </label>
+                            </li>
+                            <li class="col-sm-12">
+                                <button type="submit" value="submit" id="btn_submit_1">SEND EMAIL</button>
+                            </li>
+                        </ul>
+                    </form>
                 </div>
             </div>
     </section>
