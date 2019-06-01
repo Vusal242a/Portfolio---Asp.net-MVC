@@ -13,7 +13,7 @@ namespace ASPNetFinal.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201905300832485_VusalCV"; }
+            get { return "201906011032444_Vusal-CV"; }
         }
         
         string IMigrationMetadata.Source

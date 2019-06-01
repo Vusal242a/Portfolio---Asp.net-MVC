@@ -14,7 +14,12 @@
                 <div class="media-body">
 
                     <!-- COmpany Logo -->
-                    <div class="company-logo"> <img src="~/Template/images/company-logo-1.jpg" alt=""> </div>
+                    <div class="company-logo" style="width:100px; height:100px">
+                        <input name="fileName" id="fileName"
+                               value="@(string.IsNullOrWhiteSpace(item.Image)?"":Href("~/Template/media/"+item.Image))"
+                               type="hidden" />
+                        <img src="@(string.IsNullOrWhiteSpace(item.Image)?"":Href("~/Template/Media/"+item.Image))" id="news-image" />
+                    </div>
                     <h6>@item.CompanyName</h6>
                     <p>@item.JobTitle</p>
                     <p>@item.Location</p>

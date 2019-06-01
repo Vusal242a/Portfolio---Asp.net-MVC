@@ -41,8 +41,8 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
         public ActionResult AddProExp()
         {
-            var ProfEXP = db.ProfessionalExperience.ToList();
-            return View(ProfEXP);
+            
+            return View();
         }
         public ActionResult AddAcademicBackg()
         {
@@ -118,12 +118,43 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             return RedirectToAction("EditCV");
         }
         [HttpPost]
-        public ActionResult AddProEx(ProfessionalExperience ProfExp, HttpPostedFileBase Image)
+        public ActionResult AddProEx(ProfessionalExperience ProfExp, HttpPostedFileBase Image, string fileName)
         {
+            if (Image != null)
+            {
+                bool valid = true;
+                if (!Image.CheckImageType())
+                {
+                    ModelState.AddModelError("mediaUrl", "Şəkil uyğun deyil!");
+                    valid = false;
+                }
+
+                if (!Image.CheckImageSize(5))
+                {
+                    ModelState.AddModelError("mediaUrl", "Şəklin ölçüsü uyğun deyil!");
+                    valid = false;
+                }
+
+                if (valid)
+                {
+                    string newPath = Image.SaveImage(Server.MapPath("~/Template/Media/"));
+
+                    //System.IO.File.Move(Server.MapPath(System.IO.Path.Combine("~/Template/media", entity.MediaUrl)),
+                    //    Server.MapPath(System.IO.Path.Combine("~/Template/media", entity.MediaUrl)));
+
+
+                    ProfExp.Image = newPath;
+
+                }
+            }
+            else if (!string.IsNullOrWhiteSpace(ProfExp.Image)
+                && !string.IsNullOrWhiteSpace(fileName))
+            {
+                ProfExp.Image = null;
+            }
+
             if (ModelState.IsValid)
             {
-                string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
-                ProfExp.Image = i;
                 ProfExp.CreatedDate = DateTime.Now;
                 db.ProfessionalExperience.Add(ProfExp);
                 db.SaveChanges();
