@@ -1,4 +1,5 @@
 ﻿using ASPNetFinal.AppCode.Constant;
+using ASPNetFinal.AppCode.Filters;
 using ASPNetFinal.Models;
 using ASPNetFinal.Models.Entity;
 using System;
@@ -11,6 +12,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
 
     [CvAuthorizationAttribute]
+    [CVFilterAttribute]
     public class DashboardController : Controller
     {
         CvDbContext db = new CvDbContext();
@@ -41,13 +43,11 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
         public ActionResult AddProExp()
         {
-            
             return View();
         }
         public ActionResult AddAcademicBackg()
         {
-            var ACAD = db.AAcademicBackgroundca.ToList();
-            return View(ACAD);
+            return View();
         }
         public ActionResult Catego()
         {
@@ -162,12 +162,43 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             return RedirectToAction("EditCV");
         }
         [HttpPost]
-        public ActionResult AddAcademicBack(AcademicBackground AcBack, HttpPostedFileBase Image)
+        public ActionResult AddAcademicBack(AcademicBackground AcBack, HttpPostedFileBase Image, string fileName)
         {
+            if (Image != null)
+            {
+                bool valid = true;
+                if (!Image.CheckImageType())
+                {
+                    ModelState.AddModelError("mediaUrl", "Şəkil uyğun deyil!");
+                    valid = false;
+                }
+
+                if (!Image.CheckImageSize(5))
+                {
+                    ModelState.AddModelError("mediaUrl", "Şəklin ölçüsü uyğun deyil!");
+                    valid = false;
+                }
+
+                if (valid)
+                {
+                    string newPath = Image.SaveImage(Server.MapPath("~/Template/Media/"));
+
+                    //System.IO.File.Move(Server.MapPath(System.IO.Path.Combine("~/Template/media", entity.MediaUrl)),
+                    //    Server.MapPath(System.IO.Path.Combine("~/Template/media", entity.MediaUrl)));
+
+
+                    AcBack.Image = newPath;
+
+                }
+            }
+            else if (!string.IsNullOrWhiteSpace(AcBack.Image)
+                && !string.IsNullOrWhiteSpace(fileName))
+            {
+                AcBack.Image = null;
+            }
+
             if (ModelState.IsValid)
             {
-                string i = Image.SaveImage(Server.MapPath("~/Template/Media"));
-                AcBack.Image = i;
                 AcBack.CreatedDate = DateTime.Now;
                 db.AAcademicBackgroundca.Add(AcBack);
                 db.SaveChanges();
@@ -205,6 +236,6 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
                 return View();
             }
         }
-      
+
     }
 }

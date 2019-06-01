@@ -1,4 +1,5 @@
-﻿using ASPNetFinal.Models;
+﻿using ASPNetFinal.AppCode.Filters;
+using ASPNetFinal.Models;
 using ASPNetFinal.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace ASPNetFinal.Controllers
 {
+    [CVFilterAttribute]
     public class HomeController : Controller
     {
         CvDbContext db = new CvDbContext();
@@ -80,6 +82,10 @@ namespace ASPNetFinal.Controllers
                 return RedirectToAction("Contact");
             }
             return RedirectToAction("Contact");
+        }
+        public ActionResult ErrorPage()
+        {
+            return View();
         }
     }
 }

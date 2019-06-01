@@ -42,7 +42,7 @@ namespace ASPNetFinal
                     client.Send(mail);
                     return true;
                 }
-                catch (Exception ex) { }
+                catch (Exception) { }
 
                 retry--;
             } while (retry > 0);

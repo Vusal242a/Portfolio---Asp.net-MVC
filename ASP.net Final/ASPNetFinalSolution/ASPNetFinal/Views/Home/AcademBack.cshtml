@@ -7,18 +7,22 @@
     <!-- Academic Background -->
     <h5 class="tittle">Academic Background</h5>
     <div class="padding-30 exp-history">
-
         @foreach (var item in Model)
         {
             <div class="exp">
                 <div class="media-left"> <span class="sun">@item.Qualification</span> </div>
                 <div class="media-body">
                     <!-- COmpany Logo -->
-                    <div class="company-logo"> <span class="diploma"><i class="fa fa-graduation-cap"></i> Download Diploma</span> </div>
+                    <div class="company-logo" style="width:100px; height:100px">
+                        <input name="fileName" id="fileName"
+                               value="@(string.IsNullOrWhiteSpace(item.Image)?"":Href("~/Template/Media/"+item.Image))"
+                               type="hidden" />
+                        <img src="@(string.IsNullOrWhiteSpace(item.Image)?"":Href("~/Template/Media/"+item.Image))" id="news-image" />
+                    </div>
                     <h6>@item.UniversityName</h6>
                     <p>@item.Degree</p>
                     <p>@item.YearOfObtention</p>
-                    <p class="margin-top-10">@item.Details<a href="#.">Read More</a> </p>
+                    <p class="margin-top-10">@item.Details
                 </div>
             </div>
         }

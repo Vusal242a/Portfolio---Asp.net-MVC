@@ -56,9 +56,16 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.4\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -149,6 +156,7 @@
     <Compile Include="AppCode\Extensions\ImageExtension.cs" />
     <Compile Include="AppCode\Extensions\MailExtension.cs" />
     <Compile Include="AppCode\Filters\CvAuthorizationAttribute.cs" />
+    <Compile Include="AppCode\Filters\CVFilterAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -161,9 +169,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906011032444_Vusal-CV.cs" />
-    <Compile Include="Migrations\201906011032444_Vusal-CV.Designer.cs">
-      <DependentUpon>201906011032444_Vusal-CV.cs</DependentUpon>
+    <Compile Include="Migrations\201906011215035_VusalCV.cs" />
+    <Compile Include="Migrations\201906011215035_VusalCV.Designer.cs">
+      <DependentUpon>201906011215035_VusalCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011338253_VusalCV.v.1.cs" />
+    <Compile Include="Migrations\201906011338253_VusalCV.v.1.Designer.cs">
+      <DependentUpon>201906011338253_VusalCV.v.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011340431_VusalCV.v.2.cs" />
+    <Compile Include="Migrations\201906011340431_VusalCV.v.2.Designer.cs">
+      <DependentUpon>201906011340431_VusalCV.v.2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -173,6 +189,7 @@
     <Compile Include="Models\Entity\BioSkills.cs" />
     <Compile Include="Models\Entity\Category.cs" />
     <Compile Include="Models\Entity\ContactMe.cs" />
+    <Compile Include="Models\Entity\ErrorHistory.cs" />
     <Compile Include="Models\Entity\Person.cs" />
     <Compile Include="Models\Entity\ProfessionalExperience.cs" />
     <Compile Include="Models\Entity\Skills.cs" />
@@ -276,6 +293,7 @@
     <Content Include="Template\blog-single.html" />
     <Content Include="Template\blog.html" />
     <Content Include="Template\contact.html" />
+    <Content Include="Template\css404\style.css" />
     <Content Include="Template\css\bootstrap\bootstrap.min.css" />
     <Content Include="Template\css\font-awesome.min.css" />
     <Content Include="Template\css\fonts\glyphicons-halflings-regular-2.html" />
@@ -392,6 +410,10 @@
     <Content Include="Areas\Ad1000\Views\ContactMe\Details.cshtml" />
     <Content Include="Areas\Ad1000\Views\ContactMe\Index.cshtml" />
     <Content Include="Areas\Ad1000\Views\ContactMe\ContactReply.cshtml" />
+    <Content Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Template\fonts\fontawesome-webfont93e3.ttf" />
@@ -414,10 +436,17 @@
     <Content Include="Views\Home\ReProfExp.cshtml" />
     <Content Include="Views\Home\AcademBack.cshtml" />
     <Content Include="Views\Home\BioSkill.cshtml" />
+    <Content Include="Views\Home\ErrorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906011032444_Vusal-CV.resx">
-      <DependentUpon>201906011032444_Vusal-CV.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906011215035_VusalCV.resx">
+      <DependentUpon>201906011215035_VusalCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011338253_VusalCV.v.1.resx">
+      <DependentUpon>201906011338253_VusalCV.v.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011340431_VusalCV.v.2.resx">
+      <DependentUpon>201906011340431_VusalCV.v.2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,13 +7,13 @@ namespace ASPNetFinal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class VusalCV : IMigrationMetadata
+    public sealed partial class VusalCVv1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(VusalCV));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(VusalCVv1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201906011032444_Vusal-CV"; }
+            get { return "201906011338253_VusalCV.v.1"; }
         }
         
         string IMigrationMetadata.Source

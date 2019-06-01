@@ -4,10 +4,10 @@ using System.Data.Entity;
 
 namespace ASPNetFinal.Models
 {
-    public class CvDbContext: DbContext
+    public class CvDbContext : DbContext
     {
         public CvDbContext()
-            :base ("name=cString")
+            : base("name=cString")
         {
 
         }
@@ -19,6 +19,7 @@ namespace ASPNetFinal.Models
         public DbSet<ContactMe> ContactMe { get; set; }
         public DbSet<ProfessionalExperience> ProfessionalExperience { get; set; }
         public DbSet<Skills> Skills { get; set; }
+        public DbSet<ErrorHistory> ErrorHistories { get; set; }
         public DbSet<SocialProfiles> SocialProfiles { get; set; }
     }
 }

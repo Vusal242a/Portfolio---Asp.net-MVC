@@ -33,12 +33,9 @@ namespace ASPNetFinal.Migrations
                                        Location = "Baki",
                                         Image ="",
                                          Website = "Vusal.com",
-
                         }
-
                     });
                 }
-
 
                 if (!context.Admin.Any())
                 {
@@ -48,9 +45,7 @@ namespace ASPNetFinal.Migrations
                         {
                                 Email ="vusalim@code.edu.az",
                                  Password = "admin123",
-                                  
                         }
-
                     });
                 }
 
@@ -61,23 +56,13 @@ namespace ASPNetFinal.Migrations
                         new SocialProfiles
                         {
                                 Facebook = "http://facebook.com/vusal242a",
-                                 
-                                 
-
                         }
 
                     }); ;
                 }
-
-
-
-
-
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 

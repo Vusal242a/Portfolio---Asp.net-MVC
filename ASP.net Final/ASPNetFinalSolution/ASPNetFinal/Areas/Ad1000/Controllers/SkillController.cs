@@ -6,12 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using ASPNetFinal.AppCode.Filters;
 using ASPNetFinal.Models;
 using ASPNetFinal.Models.Entity;
 
 namespace ASPNetFinal.Areas.Ad1000.Controllers
 {
     [CvAuthorization]
+    [CVFilterAttribute]
     public class SkillController : Controller
     {
         private CvDbContext db = new CvDbContext();
