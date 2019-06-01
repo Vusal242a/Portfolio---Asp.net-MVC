@@ -5,9 +5,9 @@
     <!-- Academic Background -->
     <h5 class="tittle">Academic Background</h5>
     <div class="padding-30 exp-history">
-
+        @Html.Action("RefreshAcademicPOST", "Dashboard")
         <!-- ADD EXP -->
-        <form method="post"action="@Url.Action("AddAcademicBack","Dashboard")"enctype="multipart/form-data">
+        <form method="post" action="@Url.Action("AddAcademicBack","Dashboard")" enctype="multipart/form-data">
             <div class="exp">
                 <div class="row">
                     <div class="col-sm-7">
@@ -36,7 +36,7 @@
                             <i class="empty-icon"></i>
                             <a href="javascript:removePhoto()"><i class="clear-icon header-right-button"></i></a>
                             @Html.EditorFor(model => model.Image,
-                           new { htmlAttributes = new { @class = "form-control", type = "file", style = "display:none", accept = "image/*", onchange = "readURL(this)", id = "mediaUrl" } })
+                                      new { htmlAttributes = new { @class = "form-control", type = "file", style = "display:none", accept = "image/*", onchange = "readURL(this)", id = "mediaUrl" } })
                         </label>
                     </div>
 

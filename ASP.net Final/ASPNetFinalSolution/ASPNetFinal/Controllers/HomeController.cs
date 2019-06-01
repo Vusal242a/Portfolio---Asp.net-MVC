@@ -58,12 +58,12 @@ namespace ASPNetFinal.Controllers
         }
         public ActionResult AcademBack()
         {
-            var Academic = db.AAcademicBackgroundca.ToList();
+            var Academic = db.AAcademicBackgroundca.Where(w => w.DeletedDate == null).ToList();
             return View(Academic);
         }
         public ActionResult BioSkill()
         {
-            var bios = db.BioSkills.OrderByDescending(b=> b.AsBar==true).ToList();
+            var bios = db.BioSkills.OrderByDescending(b=> b.AsBar==true).Where(w=> w.DeletedDate==null).ToList();
             return View(bios);
         }
         [HttpPost]

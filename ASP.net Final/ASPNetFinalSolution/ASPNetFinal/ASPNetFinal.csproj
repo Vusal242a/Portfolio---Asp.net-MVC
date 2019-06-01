@@ -411,6 +411,7 @@
     <Content Include="Areas\Ad1000\Views\ContactMe\Index.cshtml" />
     <Content Include="Areas\Ad1000\Views\ContactMe\ContactReply.cshtml" />
     <Content Include="NLog.config" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\RefreshAcademicPOST.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

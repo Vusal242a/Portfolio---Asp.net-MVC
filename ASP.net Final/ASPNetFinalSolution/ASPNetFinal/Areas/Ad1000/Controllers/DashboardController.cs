@@ -33,7 +33,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
         public ActionResult AddBioSkill()
         {
-            var Bios = db.BioSkills.ToList();
+            var Bios = db.BioSkills.Where(w => w.DeletedDate == null).ToList();
             return View(Bios);
         }
         public ActionResult AddSocialProfiles()
@@ -237,5 +237,26 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             }
         }
 
+        public ActionResult DeleteBioPOST(int? DeleteBP)
+        {
+            var DeleteBioSkill = db.BioSkills.Where(w => w.DeletedDate == null && w.Id == DeleteBP).FirstOrDefault();
+            DeleteBioSkill.DeletedDate = DateTime.Now;
+            db.Entry(DeleteBioSkill).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("EditCV");
+        }
+        public ActionResult RefreshAcademicPOST()
+        {
+            return View(db.AAcademicBackgroundca.Where(w=> w.DeletedDate==null).ToList());
+        }
+        [HttpPost]
+        public ActionResult DeleteAcaPOST(int? DeleteAcaPOST)
+        {
+            var DeleteAC = db.AAcademicBackgroundca.Where(w => w.DeletedDate == null && w.Id == DeleteAcaPOST).FirstOrDefault();
+            DeleteAC.DeletedDate = DateTime.Now;
+            db.Entry(DeleteAC).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("EditCV");
+        }
     }
 }
