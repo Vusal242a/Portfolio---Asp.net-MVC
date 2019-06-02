@@ -1,110 +1,57 @@
-﻿@model IEnumerable<ASPNetFinal.Models.Entity.BioSkills>
+﻿@model ASPNetFinal.Models.Entity.BioSkills
 @{ Layout = null;}
 
 <h5 class="tittle">Bio & Skills</h5>
 <div class="bio-info padding-30">
-    <div class="skills">
-        @foreach (var item in Model)
-        {
-            if (item.AsBar == true)
-            {
-                <form action="@Url.Action("DeleteAcaPOST","Dashboard")" method="post">
-                    <h6>@item.Category.Name</h6>
-                    <div class="panel-group accordion" id="accordion5">
-                        <div class="panel panel-default">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <!-- PANEL HEADING -->
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#@item.Id"> @item.Skills.Name</a></h4>
-                                    </div>
-                                </div>
-                                <!-- Skillls Bars -->
-                                <div class="col-sm-8">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="@item.SkillLeve" aria-valuemin="0" aria-valuemax="100" style="width: @item.SkillLeve%;"> <span class="sr-only">@item.SkillLeve% Complete</span> </div>
-                                    </div>
-                                    <!-- Skillls Text -->
-                                    <div id="@item.Id" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>@item.SkillDescription</p>
-                                        </div>
-                                    </div>
-                                </div>
+        @Html.Action("RefreshBioPOST", "Dashboard")
+
+        <hr />
+        <form method="post" action="@Url.Action("BioSkills","Dashboard")">
+            <textarea class="form-control" value="" name="Description"></textarea>
+            <div class="skills margin-top-50">
+                <!-- SKILLS -->
+                <h6>Add A Skill</h6>
+                <!-- Sound Engineering -->
+                <div class="row">
+
+                    <!-- Categories -->
+                    @Html.Action("Catego", "Dashboard")
+
+                    <!--  Skills -->
+                    @Html.Action("Skills", "Dashboard")
+                </div>
+
+                <!-- Disply Type -->
+                <div class="disply-type">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio1" value="true" name="AsBar">
+                                <label for="inlineRadio1"> Display As Bar </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio2" value="true" name="AsTag">
+                                <label for="inlineRadio2"> Display As Tag </label>
                             </div>
                         </div>
                     </div>
-                    <input value="@item.Id" type="hidden" name="DeleteBioPOST" />
-                    <button href="#" class="btn" type="submit" style="background-color:red"><i class="fa fa-trash"></i> Delete</button>
-                    <hr />
-                </form>
-
-            }
-        }
-
-        @foreach (var item in Model)
-        {
-            if (item.AsTag == true)
-            {
-                <form action="@Url.Action("DeletePOST","Dashboard")" method="post">
-                    <a href="#." class="btn p-3" style="background:#346abb; color:white; margin-bottom: 3px;">@item.Category.Name</a>
-                    <br />
-                    <input value="@item.Id" type="hidden" name="DeleteBioPOST" />
-                    <button href="#" class="btn" type="submit" style="background-color:red"><i class="fa fa-trash"></i> Delete</button>
-                </form>
-            }
-        }
-        <br />
-
-
-    </div>
-    <hr />
-    <form method="post" action="@Url.Action("BioSkills","Dashboard")">
-        <textarea class="form-control" value="" name="Description"></textarea>
-        <div class="skills margin-top-50">
-            <!-- SKILLS -->
-            <h6>Add A Skill</h6>
-            <!-- Sound Engineering -->
-            <div class="row">
-
-                <!-- Categories -->
-                @Html.Action("Catego", "Dashboard")
-
-                <!--  Skills -->
-                @Html.Action("Skills", "Dashboard")
-            </div>
-
-            <!-- Disply Type -->
-            <div class="disply-type">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="radio radio-inline">
-                            <input type="radio" id="inlineRadio1" value="true" name="AsBar">
-                            <label for="inlineRadio1"> Display As Bar </label>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="radio radio-inline">
-                            <input type="radio" id="inlineRadio2" value="true" name="AsTag">
-                            <label for="inlineRadio2"> Display As Tag </label>
-                        </div>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Skill Info -->
-            <div class="skill-type-info">
-                <label>
-                    Skill Level
-                    <input type="text" class="form-control" placeholder="Skill Level" name="SkillLeve">
-                </label>
-                <label>
-                    Skill Description
-                    <textarea class="form-control" placeholder="Skill Description" name="SkillDescription"></textarea>
-                </label>
+                <!-- Skill Info -->
+                <div class="skill-type-info">
+                    <label>
+                        Skill Level
+                        <input type="text" class="form-control" placeholder="Skill Level" name="SkillLeve">
+                    </label>
+                    <label>
+                        Skill Description
+                        <textarea class="form-control" placeholder="Skill Description" name="SkillDescription"></textarea>
+                    </label>
+                </div>
+                <!-- ADD MORE-->
+                <button href="#" class="btn" type="submit"><i class="fa fa-plus"></i> Add Skill</button>
             </div>
-            <!-- ADD MORE-->
-            <button href="#" class="btn" type="submit"><i class="fa fa-plus"></i> Add Skill</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>

@@ -53,7 +53,7 @@ namespace ASPNetFinal.Controllers
         }
         public ActionResult ReProfExp()
         {
-            var ProExp = db.ProfessionalExperience.ToList();
+            var ProExp = db.ProfessionalExperience.Where(w => w.DeletedDate == null).ToList();
             return View(ProExp);
         }
         public ActionResult AcademBack()

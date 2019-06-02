@@ -9,7 +9,7 @@ namespace ASPNetFinal.Models.Entity
     public class AcademicBackground:BaseEntity
     {
         public string Image { get; set; }
-        [StringLength(10)]
+        [StringLength(150)]
         public string Qualification { get; set; }
         [StringLength(150)]
         public string Degree { get; set; }

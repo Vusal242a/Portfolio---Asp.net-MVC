@@ -169,17 +169,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906011215035_VusalCV.cs" />
-    <Compile Include="Migrations\201906011215035_VusalCV.Designer.cs">
-      <DependentUpon>201906011215035_VusalCV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906011338253_VusalCV.v.1.cs" />
-    <Compile Include="Migrations\201906011338253_VusalCV.v.1.Designer.cs">
-      <DependentUpon>201906011338253_VusalCV.v.1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906011340431_VusalCV.v.2.cs" />
-    <Compile Include="Migrations\201906011340431_VusalCV.v.2.Designer.cs">
-      <DependentUpon>201906011340431_VusalCV.v.2.cs</DependentUpon>
+    <Compile Include="Migrations\201906020040524_VusalCV.cs" />
+    <Compile Include="Migrations\201906020040524_VusalCV.Designer.cs">
+      <DependentUpon>201906020040524_VusalCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -412,6 +404,8 @@
     <Content Include="Areas\Ad1000\Views\ContactMe\ContactReply.cshtml" />
     <Content Include="NLog.config" />
     <Content Include="Areas\Ad1000\Views\Dashboard\RefreshAcademicPOST.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\RefreshBioPOST.cshtml" />
+    <Content Include="Areas\Ad1000\Views\Dashboard\RefreshProExpPOST.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -440,14 +434,8 @@
     <Content Include="Views\Home\ErrorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906011215035_VusalCV.resx">
-      <DependentUpon>201906011215035_VusalCV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906011338253_VusalCV.v.1.resx">
-      <DependentUpon>201906011338253_VusalCV.v.1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906011340431_VusalCV.v.2.resx">
-      <DependentUpon>201906011340431_VusalCV.v.2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906020040524_VusalCV.resx">
+      <DependentUpon>201906020040524_VusalCV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

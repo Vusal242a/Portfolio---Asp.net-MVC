@@ -33,8 +33,7 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
         }
         public ActionResult AddBioSkill()
         {
-            var Bios = db.BioSkills.Where(w => w.DeletedDate == null).ToList();
-            return View(Bios);
+            return View();
         }
         public ActionResult AddSocialProfiles()
         {
@@ -237,9 +236,14 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             }
         }
 
-        public ActionResult DeleteBioPOST(int? DeleteBP)
+        public ActionResult RefreshBioPOST()
         {
-            var DeleteBioSkill = db.BioSkills.Where(w => w.DeletedDate == null && w.Id == DeleteBP).FirstOrDefault();
+            return View(db.BioSkills.Where(w => w.DeletedDate == null).ToList());
+        }
+        [HttpPost]
+        public ActionResult DeleteBioPOST(int? DeleteBioPOST)
+        {
+            var DeleteBioSkill = db.BioSkills.Where(w => w.DeletedDate == null && w.Id == DeleteBioPOST).FirstOrDefault();
             DeleteBioSkill.DeletedDate = DateTime.Now;
             db.Entry(DeleteBioSkill).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
@@ -255,6 +259,18 @@ namespace ASPNetFinal.Areas.Ad1000.Controllers
             var DeleteAC = db.AAcademicBackgroundca.Where(w => w.DeletedDate == null && w.Id == DeleteAcaPOST).FirstOrDefault();
             DeleteAC.DeletedDate = DateTime.Now;
             db.Entry(DeleteAC).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("EditCV");
+        }
+        public ActionResult RefreshProExpPOST()
+        {
+            return View(db.ProfessionalExperience.Where(w => w.DeletedDate == null).ToList());
+        }
+        public ActionResult DeleteProExpPOST(int? DeleteProExpPOST)
+        {
+            var DeletePE = db.ProfessionalExperience.Where(w => w.DeletedDate == null && w.Id == DeleteProExpPOST).FirstOrDefault();
+            DeletePE.DeletedDate = DateTime.Now;
+            db.Entry(DeletePE).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("EditCV");
         }

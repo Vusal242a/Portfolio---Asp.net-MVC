@@ -6,7 +6,7 @@
     <!-- Professional Experience -->
     <h5 class="tittle">Professional Experience</h5>
     <div class="padding-30 exp-history">
-
+        @Html.Action("RefreshProExpPOST", "Dashboard")
         <!-- ADD Professional -->
         <form method="post" action="@Url.Action("AddProEx","Dashboard")" enctype="multipart/form-data">
             <div class="exp">
@@ -22,11 +22,11 @@
                         </label>
                         <label>
                             Company Name
-                            <input type="text" class="form-control"  name="CompanyName">
+                            <input type="text" class="form-control" name="CompanyName">
                         </label>
                         <label>
                             Location
-                            <input type="text" class="form-control"  name="Location">
+                            <input type="text" class="form-control" name="Location">
                         </label>
                     </div>
 
