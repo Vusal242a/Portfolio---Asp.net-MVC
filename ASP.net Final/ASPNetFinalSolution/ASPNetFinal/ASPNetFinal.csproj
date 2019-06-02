@@ -169,9 +169,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906020040524_VusalCV.cs" />
-    <Compile Include="Migrations\201906020040524_VusalCV.Designer.cs">
-      <DependentUpon>201906020040524_VusalCV.cs</DependentUpon>
+    <Compile Include="Migrations\201906021308153_VusalCV.cs" />
+    <Compile Include="Migrations\201906021308153_VusalCV.Designer.cs">
+      <DependentUpon>201906021308153_VusalCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CvDbContext.cs" />
@@ -434,8 +434,8 @@
     <Content Include="Views\Home\ErrorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906020040524_VusalCV.resx">
-      <DependentUpon>201906020040524_VusalCV.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906021308153_VusalCV.resx">
+      <DependentUpon>201906021308153_VusalCV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

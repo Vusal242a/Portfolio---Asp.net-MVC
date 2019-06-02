@@ -280,12 +280,8 @@ C:\Users\Igbal032\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution
 C:\Users\Igbal032\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
 C:\Users\Igbal032\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
 C:\Users\Igbal032\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csprojAssemblyReference.cache
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\NLog.dll
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\NLog.xml
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCVv1.resources
-C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCVv2.resources
 C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csprojResolveAssemblyReference.cache
 C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\ApplicationInsights.config
 C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\bin\ASPNetFinal.dll.config
@@ -386,3 +382,5 @@ C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\AS
 C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.pdb
 C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
 C:\Users\Vusal\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.Migrations.VusalCV.resources
+C:\Users\vusalim\Desktop\ASPNET-FINAL-PROJECT\ASP.net Final\ASPNetFinalSolution\ASPNetFinal\obj\Debug\ASPNetFinal.csproj.GenerateResource.cache
